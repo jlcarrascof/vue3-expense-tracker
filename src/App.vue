@@ -1,5 +1,11 @@
-<script setup>
+<script>
+  import { getData } from './api'
 
+  export default {
+    mounted() {
+      getData()
+    }
+  }
 </script>
 
 <template>
