@@ -21,6 +21,7 @@
                             class="w-full p-2 rounded bg-gray-200 border pr-10"
                         />
                         <button
+                            type="button"
                             @click="showPassword = !showPassword"
                             class="absolute right-3 top-3 text-gray-500"
                         >
