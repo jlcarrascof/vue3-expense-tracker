@@ -1,3 +1,8 @@
+<script>
+    import { ref } from "vue"
+    const showPassword = ref(false)
+</script>
+
 <template>
     <div class="h-screen flex">
         <!-- Sección Izquierda: Formulario de Login -->
