@@ -1,15 +1,48 @@
+<script setup>
+    import { ref } from "vue";
+    const showPassword = ref(false);
+</script>
+
 <template>
-    <div class="min-h-screen flex items-center justify-center bg-gray-100">
-      <div class="bg-white p-8 rounded-lg shadow-lg w-96">
-        <h2 class="text-2xl font-bold mb-4 text-center">Iniciar Sesión</h2>
-        <form>
-          <input type="email" placeholder="E-mail" class="w-full p-2 border rounded mb-3" />
-          <input type="password" placeholder="Password" class="w-full p-2 border rounded mb-3" />
-          <button class="w-full bg-green-600 text-white py-2 rounded">Ingresar</button>
-        </form>
-        <p class="text-center mt-4">
-          ¿No tienes cuenta? <router-link to="/signup" class="text-green-600">Regístrate aquí</router-link>
-        </p>
-      </div>
+    <div class="h-screen flex">
+        <div class="w-1/2 flex items-center justify-center bg-white">
+            <div class="p-8 rounded-lg shadow-lg w-96">
+                <h2 class="text-2xl font-bold mb-4 text-center text-black">Welcome Back</h2>
+                <p class="text-gray-500 text-center mb-6">Please enter your details to log in</p>
+                <form>
+                    <input type="email" placeholder="Email address"
+                        class="w-full p-2 rounded mb-3 bg-gray-200 border" />
+
+                    <div class="relative">
+                        <input
+                            :type="showPassword ? 'text' : 'password'"
+                            placeholder="Max 10 chars"
+                            class="w-full p-2 rounded bg-gray-200 border pr-10"
+                        />
+                        <button
+                            type="button"
+                            @click="showPassword = !showPassword"
+                            class="absolute right-3 top-3 text-gray-500"
+                        >
+                            <i v-if="showPassword" class="fas fa-eye-slash"></i>
+                            <i v-else class="fas fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <button class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition mt-4">
+                        Log in
+                    </button>
+                    <p class="text-center mt-4">
+                        Don't have an account?
+                        <router-link to="/signup" class="text-green-600 font-semibold hover:underline">
+                            SignUp
+                        </router-link>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div class="w-1/2 flex items-center justify-center bg-green-100">
+            <img src="../assets/vue-dashboard.jpg" alt="Vue Dashboard" class="w-3/4">
+        </div>
     </div>
 </template>
