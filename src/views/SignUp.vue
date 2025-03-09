@@ -30,8 +30,20 @@
               </div>
             </label>
           </div>
-          
-        </div>
+
+          <form>
+            <input
+              type="text"
+              placeholder="Full Name"
+              class="w-full p-2 border rounded mb-3 bg-gray-200"
+            />
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="w-full p-2 border rounded mb-3 bg-gray-200"
+            />
+
+          </form>
       </div>
    </div>
 </template>
