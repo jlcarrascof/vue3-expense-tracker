@@ -13,7 +13,7 @@
 </script>
 
 <template>
-   <div class="h-screen flex">
+    <div class="h-screen flex">
       <!-- Sección Izquierda: Formulario de Registro -->
       <div class="w-1/2 flex items-center justify-center bg-white">
         <div class="p-8 rounded-lg shadow-lg w-96">
@@ -68,12 +68,12 @@
               </router-link>
             </p>
           </form>
+        </div>
+      </div>
+
+      <!-- Sección Derecha: Imagen Dashboard -->
+      <div class="w-1/2 flex items-center justify-center bg-green-100">
+        <img src="../assets/vue-dashboard.jpg" alt="Vue Dashboard" class="w-3/4">
       </div>
     </div>
-
-    <!-- Sección Derecha: Imagen Dashboard -->
-    <div class="w-1/2 flex items-center justify-center bg-green-100">
-      <img src="../assets/vue-dashboard.jpg" alt="Vue Dashboard" class="w-3/4">
-    </div>
-   </div>
 </template>
