@@ -58,6 +58,15 @@
                 <i v-else class="fas fa-eye"></i>
               </button>
             </div>
+            <button class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition mt-4">
+              Sign Up
+            </button>
+            <p class="text-center mt-4">
+              Already have an account?
+              <router-link to="/" class="text-green-600 font-semibold hover:underline">
+                Log in
+              </router-link>
+            </p>
           </form>
       </div>
     </div>
