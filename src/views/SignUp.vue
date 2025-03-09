@@ -43,7 +43,23 @@
               class="w-full p-2 border rounded mb-3 bg-gray-200"
             />
 
+            <div class="relative">
+              <input
+                :type="showPassword ? 'text' : 'password'"
+                placeholder="Max 10 chars"
+                class="w-full p-2 rounded bg-gray-200 border pr-10"
+              />
+              <button
+                type="button"
+                @click="showPassword = !showPassword"
+                class="absolute right-3 top-3 text-gray-500"
+              >
+                <i v-if="showPassword" class="fas fa-eye-slash"></i>
+                <i v-else class="fas fa-eye"></i>
+              </button>
+            </div>
           </form>
       </div>
+    </div>
    </div>
 </template>
