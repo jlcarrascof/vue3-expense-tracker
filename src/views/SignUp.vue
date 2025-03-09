@@ -19,6 +19,14 @@
         <div class="p-8 rounded-lg shadow-lg w-96">
           <h2 class="text-2xl font-bold mb-4 text-center text-black">Create Account</h2>
           <p class="text-gray-500 text-center mb-6">Please enter your details to sign up</p>
+
+          <!-- Imagen de perfil con botón para subir foto -->
+          <div class="flex flex-col items-center mb-4">
+            <label class="cursor-pointer">
+              <input type="file" class="hidden" @change="handleFileUpload" accept="image/*" />
+              
+            </label>
+          </div>
         </div>
       </div>
    </div>
