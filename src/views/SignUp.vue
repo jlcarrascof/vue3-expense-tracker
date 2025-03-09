@@ -24,9 +24,13 @@
           <div class="flex flex-col items-center mb-4">
             <label class="cursor-pointer">
               <input type="file" class="hidden" @change="handleFileUpload" accept="image/*" />
-              
+              <div class="w-20 h-20 bg-gray-300 rounded-full flex items-center justify-center overflow-hidden">
+                <img v-if="profileImage" :src="profileImage" alt="Profile" class="w-full h-full object-cover" />
+                <span v-else class="text-gray-500 text-sm">Upload</span>
+              </div>
             </label>
           </div>
+          
         </div>
       </div>
    </div>
