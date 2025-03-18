@@ -1,0 +1,23 @@
+# Ignorar archivos de entorno
+.env
+
+# Ignorar la carpeta de dependencias de Node.js
+node_modules/
+
+# Ignorar archivos de configuración de entorno específicos (opcional)
+*.env.*
+
+# Ignorar archivos de log (opcional)
+*.log
+
+# Ignorar archivos de compilación (opcional)
+dist/
+build/
+
+# Ignorar archivos de IDE o editores de texto (opcional)
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
