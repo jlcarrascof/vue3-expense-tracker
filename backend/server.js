@@ -1,18 +1,26 @@
-const express = require('express')
-const cors = require('cors')
+const express = require("express")
+const mongoose = require("mongoose")
+const cors = require("cors")
+
+require("dotenv").config()
 const app = express()
 
 // Middleware
 app.use(cors())
 app.use(express.json())
 
-// Test route
-app.get('/api', (req, res) => {
-    res.send({ message: 'API working correctly' })
+// Connect to MongoDB
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("🔥 MongoDB Connected!"))
+  .catch((err) => console.log("❌ MongoDB Connection Error:", err))
+
+// Test Route
+app.get("/", (req, res) => {
+  res.send("API working OK")
 });
 
-// Init server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000
 app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`)
+  console.log(`🚀 Server running in http://localhost:${PORT}`)
 })
