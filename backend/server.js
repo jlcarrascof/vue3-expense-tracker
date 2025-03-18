@@ -1,6 +1,8 @@
-const express = require('express')
-const cors = require('cors')
-const app = express()
+const express = require("express")
+const mongoose = require("mongoose")
+const cors = require("cors")
+
+require("dotenv").config()
 
 // Middleware
 app.use(cors())
