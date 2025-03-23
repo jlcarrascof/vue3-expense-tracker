@@ -38,7 +38,7 @@
       })
 
       setTimeout(() => {
-        router.push("/");
+        router.push("/")
       }, 3000)
     } catch (error) {
       toast.error(`❌ ${error.response?.data?.message || "Error in registration"}`, {
@@ -70,20 +70,14 @@
             </label>
           </div>
 
-          <form>
-            <input
-              type="text"
-              placeholder="Full Name"
-              class="w-full p-2 border rounded mb-3 bg-gray-200"
-            />
-            <input
-              type="email"
-              placeholder="Email Address"
-              class="w-full p-2 border rounded mb-3 bg-gray-200"
-            />
+          <form @submit.prevent="handleRegister">
+            <input v-model="fullName" type="text" placeholder="Full Name" class="w-full p-2 border rounded mb-3 bg-gray-200" />
+            <input v-model="email" type="email" placeholder="Email Address" class="w-full p-2 border rounded mb-3 bg-gray-200" />
 
+            <!-- Password field with toggle button for visibility -->
             <div class="relative">
               <input
+                v-model="password"
                 :type="showPassword ? 'text' : 'password'"
                 placeholder="Max 10 chars"
                 class="w-full p-2 rounded bg-gray-200 border pr-10"
@@ -97,7 +91,8 @@
                 <i v-else class="fas fa-eye"></i>
               </button>
             </div>
-            <button class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition mt-4">
+
+            <button type="submit" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition mt-4">
               Sign Up
             </button>
             <p class="text-center mt-4">
