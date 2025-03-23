@@ -19,6 +19,35 @@
     }
   }
 
+  const handleRegister = async () => {
+    try {
+      const formData = {
+        fullName: fullName.value,
+        email: email.value,
+        password: password.value,
+        profileImage: profileImage.value,
+      }
+
+      await API.post("/auth/register", formData)
+
+      // ✅ Show success notification with fade-in and redirect ...
+      toast.success("✅ Registration successful! Redirecting to login...", {
+        timeout: 3000,
+        transition: "Vue-Toastification__fade",
+        position: "top-right",
+      })
+
+      setTimeout(() => {
+        router.push("/");
+      }, 3000)
+    } catch (error) {
+      toast.error(`❌ ${error.response?.data?.message || "Error in registration"}`, {
+        timeout: 3000,
+        transition: "Vue-Toastification__fade",
+        position: "top-right",
+      })
+    }
+  }
 
 </script>
 
