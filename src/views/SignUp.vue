@@ -34,7 +34,7 @@
       toast.success("✅ Registration successful! Redirecting to login...", {
         timeout: 3000,
         transition: "Vue-Toastification__fade",
-        position: "top-right",
+        position: "bottom-left",
       })
 
       setTimeout(() => {
@@ -44,7 +44,7 @@
       toast.error(`❌ ${error.response?.data?.message || "Error in registration"}`, {
         timeout: 3000,
         transition: "Vue-Toastification__fade",
-        position: "top-right",
+        position: "bottom-left",
       })
     }
   }

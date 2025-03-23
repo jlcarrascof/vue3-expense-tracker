@@ -10,7 +10,7 @@ const app = createApp(App)
 app.use(router)
 app.use(Toast, {
     transition: "Vue-Toastification__fade",
-    position: "top-right",
+    position: "bottom-left",
     timeout: 3000,
 })
 app.mount('#app')
