@@ -53,13 +53,13 @@
 
 <template>
     <div class="h-screen flex">
-      <!-- Sección Izquierda: Formulario de Registro -->
+      <!-- Left Section: Registration Form -->
       <div class="w-1/2 flex items-center justify-center bg-white">
         <div class="p-8 rounded-lg shadow-lg w-96">
           <h2 class="text-2xl font-bold mb-4 text-center text-black">Create Account</h2>
           <p class="text-gray-500 text-center mb-6">Please enter your details to sign up</p>
 
-          <!-- Imagen de perfil con botón para subir foto -->
+          <!-- Profile Image Upload Section -->
           <div class="flex flex-col items-center mb-4">
             <label class="cursor-pointer">
               <input type="file" class="hidden" @change="handleFileUpload" accept="image/*" />
@@ -110,7 +110,7 @@
         </div>
       </div>
 
-      <!-- Sección Derecha: Imagen Dashboard -->
+      <!-- Right Section: Dashboard Image -->
       <div class="w-1/2 flex items-center justify-center bg-green-100">
         <img src="../assets/vue-dashboard.jpg" alt="Vue Dashboard" class="w-3/4">
       </div>
