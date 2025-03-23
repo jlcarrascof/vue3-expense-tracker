@@ -1,5 +1,8 @@
 <script setup>
   import { ref } from "vue"
+  import { useRouter } from "vue-router"
+  import { useToast } from "vue-toastification"
+  import API from "../api"
 
   const showPassword = ref(false)
   const profileImage = ref(null)
