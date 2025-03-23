@@ -4,15 +4,22 @@
   import { useToast } from "vue-toastification"
   import API from "../api"
 
-  const showPassword = ref(false)
+  const fullName = ref("")
+  const email = ref("")
+  const password = ref("")
   const profileImage = ref(null)
+  const showPassword = ref(false)
+  const router = useRouter()
+  const toast = useToast()
 
   const handleFileUpload = (event) => {
-      const file = event.target.files[0]
-      if (file) {
-          profileImage.value = URL.createObjectURL(file)
-      }
+    const file = event.target.files[0];
+    if (file) {
+      profileImage.value = URL.createObjectURL(file)
+    }
   }
+
+
 </script>
 
 <template>
