@@ -16,5 +16,14 @@ const router = createRouter({
 
 // 🚀 Protect private routes.
 
+router.beforeEach((to, from, next) => {
+    const token = localStorage.getItem("token");
+
+    if (to.matched.some(record => record.meta.requiresAuth) && !token) {
+      next("/"); //  if not authenticated, redirect to login
+    } else {
+      next() // if have token, continue
+    }
+})
 
 export default router
