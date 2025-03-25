@@ -2,7 +2,7 @@
     import { ref } from "vue";
     import { useRouter } from "vue-router";
     import { useToast } from "vue-toastification";
-    import API from "../api/API" // Import your API instance using axios
+    import API from "../api" // Import your API instance using axios
 
     const router = useRouter()
     const toast = useToast()
