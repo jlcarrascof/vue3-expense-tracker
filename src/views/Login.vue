@@ -13,7 +13,7 @@
 
     const login = async () => {
         try {
-            const response = await API.post("/login", {
+            const response = await API.post("/auth/login", {
                 email: email.value,
                 password: password.value
             })
