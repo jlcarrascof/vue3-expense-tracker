@@ -1,6 +1,6 @@
 <script setup>
-    import { ref } from "vue";
-    const showPassword = ref(false);
+    import { ref } from "vue"
+    const showPassword = ref(false)
 </script>
 
 <template>
