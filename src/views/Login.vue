@@ -10,6 +10,27 @@
     const email = ref("")
     const password = ref("")
     const showPassword = ref(false)
+
+    const login = async () => {
+        try {
+            const response = await API.post("/login", {
+                email: email.value,
+                password: password.value
+            })
+
+            // Save the token in localStorage...
+            localStorage.setItem("token", response.data.token)
+
+            toast.success("Login successful! Redirecting...")
+
+            // Redirect to dashboard ...
+            router.push("/dashboard")
+
+        } catch (error) {
+            toast.error("Invalid email or password")
+        }
+    }
+
 </script>
 
 <template>
