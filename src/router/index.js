@@ -17,10 +17,11 @@ const router = createRouter({
 // 🚀 Protect private routes.
 
 router.beforeEach((to, from, next) => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("token")
+    console.log("Token:", token) // Print the token ...
 
     if (to.matched.some(record => record.meta.requiresAuth) && !token) {
-      next("/"); //  if not authenticated, redirect to login
+      next("/") //  if not authenticated, redirect to login
     } else {
       next() // if have token, continue
     }
