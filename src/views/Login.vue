@@ -39,12 +39,16 @@
             <div class="p-8 rounded-lg shadow-lg w-96">
                 <h2 class="text-2xl font-bold mb-4 text-center text-black">Welcome Back</h2>
                 <p class="text-gray-500 text-center mb-6">Please enter your details to log in</p>
-                <form>
-                    <input type="email" placeholder="Email address"
+                <form @submit.prevent="login">
+                    <input
+                        v-model="email"
+                        type="email"
+                        placeholder="Email address"
                         class="w-full p-2 rounded mb-3 bg-gray-200 border" />
 
                     <div class="relative">
                         <input
+                            v-model="password"
                             :type="showPassword ? 'text' : 'password'"
                             placeholder="Max 10 chars"
                             class="w-full p-2 rounded bg-gray-200 border pr-10"
