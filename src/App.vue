@@ -10,7 +10,7 @@
         <ul class="flex gap-6 text-lg font-medium">
           <li><a href="/" class="hover:text-gray-300 transition">Home</a></li>
           <li><a href="/signup" class="hover:text-gray-300 transition">Sign Up</a></li>
-          <li><a href="/login" class="hover:text-gray-300 transition">Log In</a></li>
+          <li><a href="/" class="hover:text-gray-300 transition">Log In</a></li>
         </ul>
       </nav>
     </div>
