@@ -1,12 +1,8 @@
-import axios from 'axios'
+import axios from "axios"
 
-const API_URL = 'http://localhost:5000/api'
+const API = axios.create({
+  baseURL: "http://localhost:5000/api",
+  headers: { "Content-Type": "application/json" },
+})
 
-export const getData = async () => {
-    try {
-      const response = await axios.get(API_URL)
-      console.log(response.data)
-    } catch (error) {
-      console.error('Error getting the data:', error)
-    }
-}
+export default API
