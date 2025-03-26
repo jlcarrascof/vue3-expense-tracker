@@ -1,6 +1,36 @@
 <script setup>
     import { ref } from "vue";
-    const showPassword = ref(false);
+    import { useRouter } from "vue-router";
+    import { useToast } from "vue-toastification";
+    import API from "../api" // Import your API instance using axios
+
+    const router = useRouter()
+    const toast = useToast()
+
+    const email = ref("")
+    const password = ref("")
+    const showPassword = ref(false)
+
+    const login = async () => {
+        try {
+            const response = await API.post("/auth/login", {
+                email: email.value,
+                password: password.value
+            })
+
+            // Save the token in localStorage...
+            localStorage.setItem("token", response.data.token)
+
+            toast.success("Login successful! Redirecting...")
+
+            // Redirect to dashboard ...
+            router.push("/dashboard")
+
+        } catch (error) {
+            toast.error("Invalid email or password")
+        }
+    }
+
 </script>
 
 <template>
@@ -9,12 +39,16 @@
             <div class="p-8 rounded-lg shadow-lg w-96">
                 <h2 class="text-2xl font-bold mb-4 text-center text-black">Welcome Back</h2>
                 <p class="text-gray-500 text-center mb-6">Please enter your details to log in</p>
-                <form>
-                    <input type="email" placeholder="Email address"
+                <form @submit.prevent="login">
+                    <input
+                        v-model="email"
+                        type="email"
+                        placeholder="Email address"
                         class="w-full p-2 rounded mb-3 bg-gray-200 border" />
 
                     <div class="relative">
                         <input
+                            v-model="password"
                             :type="showPassword ? 'text' : 'password'"
                             placeholder="Max 10 chars"
                             class="w-full p-2 rounded bg-gray-200 border pr-10"
