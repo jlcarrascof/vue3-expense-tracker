@@ -1,3 +1,14 @@
+<script setup>
+  import { ref } from "vue"
+
+  const menuItems = ref([
+    { path: "/dashboard", label: "Dashboard", icon: "📊" },
+    { path: "/income", label: "Income", icon: "💰" },
+    { path: "/expense", label: "Expenses", icon: "📉" },
+    { path: "/logout", label: "Logout", icon: "🚪" }
+  ])
+</script>
+
 <template>
   <aside class="bg-green-700 text-white w-64 min-h-screen p-5">
     <!-- Perfil -->
@@ -20,12 +31,3 @@
     </nav>
   </aside>
 </template>
-
-<script setup>
-  const menuItems = [
-    { label: 'Dashboard', route: '/dashboard', icon: 'dashboard-icon-class' },
-    { label: 'Ingresos', route: '/income', icon: 'income-icon-class' },
-    { label: 'Gastos', route: '/expenses', icon: 'expense-icon-class' },
-    { label: 'Cerrar Sesión', route: '/logout', icon: 'logout-icon-class' },
-  ];
-</script>
