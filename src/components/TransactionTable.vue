@@ -11,7 +11,7 @@
 </script>
 
 <template>
-  <div class="bg-white shadow-lg rounded-xl p-5">
+  <div class="bg-white shadow-lg rounded-xl p-5 mt-10">
     <div class="flex justify-between items-center mb-4">
       <h2 class="text-lg font-semibold">Recent Transactions</h2>
       <router-link to="/transactions" class="text-green-600 font-semibold hover:underline">See All →</router-link>
