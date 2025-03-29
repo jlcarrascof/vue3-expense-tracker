@@ -4,6 +4,7 @@
     <main class="flex-1 p-5">
       <SummaryCards />
       <div class="grid grid-cols-2 gap-4">
+        <TransactionTable />
       </div>
     </main>
   </div>
@@ -12,6 +13,6 @@
 <script setup>
   import Sidebar from '../components/Sidebar.vue';
   import SummaryCards from '../components/SummaryCards.vue';
-  // import FinancialInfo from '../components/FinancialInfo.vue';
+  import TransactionTable from '../components/TransactionTable.vue';
   // import Charts from '../components/Charts.vue';
 </script>
