@@ -9,9 +9,7 @@
         <!-- Financial Info -->
         <FinancialInfo />
         <!-- Charts -->
-        <!--
         <Charts />
-        -->
       </div>
     </div>
   </div>
@@ -21,5 +19,5 @@
   import Sidebar from '../components/Sidebar.vue';
   import Header from '../components/Header.vue';
   import FinancialInfo from '../components/FinancialInfo.vue';
-  // import Charts from './Charts.vue';
+  import Charts from '../components/Charts.vue';
 </script>
