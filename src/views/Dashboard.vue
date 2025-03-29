@@ -7,9 +7,7 @@
       <Header />
       <div class="flex flex-1">
         <!-- Financial Info -->
-        <!--
         <FinancialInfo />
-        -->
         <!-- Charts -->
         <!--
         <Charts />
@@ -22,6 +20,6 @@
 <script setup>
   import Sidebar from '../components/Sidebar.vue';
   import Header from '../components/Header.vue';
-  // import FinancialInfo from './FinancialInfo.vue';
+  import FinancialInfo from '../components/FinancialInfo.vue';
   // import Charts from './Charts.vue';
 </script>
