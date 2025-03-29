@@ -1,23 +1,17 @@
 <template>
-  <div class="flex h-screen">
-    <!-- Sidebar -->
+  <div class="flex">
     <Sidebar />
-    <div class="flex-1 flex flex-col">
-      <!-- Header -->
-      <Header />
-      <div class="flex flex-1">
-        <!-- Financial Info -->
-        <FinancialInfo />
-        <!-- Charts -->
-        <Charts />
+    <main class="flex-1 p-5">
+      <SummaryCards />
+      <div class="grid grid-cols-2 gap-4">
       </div>
-    </div>
+    </main>
   </div>
 </template>
 
 <script setup>
   import Sidebar from '../components/Sidebar.vue';
-  import Header from '../components/Header.vue';
-  import FinancialInfo from '../components/FinancialInfo.vue';
-  import Charts from '../components/Charts.vue';
+  import SummaryCards from '../components/SummaryCards.vue';
+  // import FinancialInfo from '../components/FinancialInfo.vue';
+  // import Charts from '../components/Charts.vue';
 </script>
