@@ -14,7 +14,27 @@
 
     const formatCurrency = (amount) => `$${Math.abs(amount)}`
 
-
+    onMounted(() => {
+        new Chart(expensesChart.value, {
+            type: 'bar',
+            data: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                datasets: [
+                    {
+                        label: 'Last 30 Days Expenses',
+                        data: [400, 600, 200, 500],
+                        backgroundColor: 'rgba(103, 80, 255, 0.7)'
+                    }
+                ],
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        })
+    })
 
 </script>
 
