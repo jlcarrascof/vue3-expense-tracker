@@ -15,9 +15,7 @@
         <TransactionTable />
         <FinancialOverview />
       </div>
-      <div class="grid grid-cols-2 gap-4">
-        <ExpensesSection />
-      </div>
+      <ExpensesSection />
     </main>
   </div>
 </template>
