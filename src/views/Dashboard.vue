@@ -1,3 +1,10 @@
+<script setup>
+  import Sidebar from '../components/Sidebar.vue'
+  import SummaryCards from '../components/SummaryCards.vue'
+  import TransactionTable from '../components/TransactionTable.vue'
+  import FinancialOverview from '../components/FinancialOverview.vue'
+</script>
+
 <template>
   <div class="flex">
     <Sidebar />
@@ -10,10 +17,3 @@
     </main>
   </div>
 </template>
-
-<script setup>
-  import Sidebar from '../components/Sidebar.vue';
-  import SummaryCards from '../components/SummaryCards.vue';
-  import TransactionTable from '../components/TransactionTable.vue';
-  import FinancialOverview from '../components/FinancialOverview.vue';
-</script>
