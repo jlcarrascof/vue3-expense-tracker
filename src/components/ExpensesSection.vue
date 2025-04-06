@@ -23,7 +23,7 @@
                     {
                         label: 'Last 30 Days Expenses',
                         data: [400, 600, 200, 500],
-                        backgroundColor: 'rgba(103, 80, 255, 0.7)'
+                        backgroundColor: 'rgba(239, 68, 68, 0.7)'
                     }
                 ],
             },
