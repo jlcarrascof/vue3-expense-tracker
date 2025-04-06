@@ -42,27 +42,30 @@
   <div class="bg-white p-6 rounded-2xl shadow-md mt-6">
     <h2 class="text-xl font-bold text-gray-800 mb-4">Expenses</h2>
 
-    <!-- Lista de Gastos -->
-    <div class="flex flex-col space-y-4">
-      <div
-        v-for="expense in expenses"
-        :key="expense.id"
-        class="flex items-center justify-between border-b pb-3"
-      >
-        <span class="text-2xl">{{ expense.icon }}</span>
-        <div class="flex-1 ml-3">
-          <p class="text-gray-900 font-medium">{{ expense.name }}</p>
-          <p class="text-sm text-gray-500">{{ expense.date }}</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Lista de Gastos -->
+      <div class="flex flex-col space-y-4">
+        <div
+          v-for="expense in expenses"
+          :key="expense.id"
+          class="flex items-center justify-between border-b pb-3"
+        >
+          <span class="text-2xl">{{ expense.icon }}</span>
+          <div class="flex-1 ml-3">
+            <p class="text-gray-900 font-medium">{{ expense.name }}</p>
+            <p class="text-sm text-gray-500">{{ expense.date }}</p>
+          </div>
+          <p class="font-bold" :class="expense.amount < 0 ? 'text-red-500' : 'text-green-500'">
+            {{ formatCurrency(expense.amount) }}
+          </p>
         </div>
-        <p class="font-bold" :class="expense.amount < 0 ? 'text-red-500' : 'text-green-500'">
-          {{ formatCurrency(expense.amount) }}
-        </p>
+      </div>
+
+      <!-- Gráfico de Gastos -->
+      <div class="mt-6 md:mt-0">
+        <canvas ref="expensesChart"></canvas>
       </div>
     </div>
 
-    <!-- Gráfico de Gastos -->
-    <div class="mt-6">
-      <canvas ref="expensesChart"></canvas>
-    </div>
   </div>
 </template>
