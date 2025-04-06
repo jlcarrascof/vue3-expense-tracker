@@ -10,6 +10,40 @@
     { id: 5, name: 'Affiliate Marketing', date: '8th Jan 2025', amount: 8000, icon: '🤝' },
     ])
 
+    const incomeChart = ref(null)
+    const formatCurrency = (amount) => `$${amount}`
+
+    onMounted(() => {
+        new Chart(incomeChart.value, {
+            type: 'doughnut',
+            data: {
+            labels: ['Salary', 'Interest from Savings', 'E-commerce Sales', 'Graphic Design', 'Affiliate Marketing'],
+            datasets: [
+                {
+                data: [12000, 9800, 11900, 10500, 8000],
+                backgroundColor: ['#5B21B6', '#DB2777', '#F59E0B', '#3B82F6', '#10B981'],
+                borderWidth: 0
+                }
+            ]
+            },
+            options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                display: true,
+                position: 'bottom'
+                },
+                tooltip: {
+                callbacks: {
+                    label: (ctx) => `${ctx.label}: $${ctx.raw}`
+                }
+                }
+            }
+            }
+        })
+    })
+
 </script>
 
 <template>
