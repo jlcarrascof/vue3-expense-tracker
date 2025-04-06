@@ -4,6 +4,7 @@
   import TransactionTable from '../components/TransactionTable.vue'
   import FinancialOverview from '../components/FinancialOverview.vue'
   import ExpensesSection from '../components/ExpensesSection.vue'
+  import IncomeSection from '../components/IncomeSection.vue'
 </script>
 
 <template>
@@ -16,6 +17,7 @@
         <FinancialOverview />
       </div>
       <ExpensesSection />
+      <IncomeSection />
     </main>
   </div>
 </template>
