@@ -65,8 +65,10 @@
       </div>
 
       <!-- Gráfico de Gastos -->
-      <div class="h-[350px]">
-        <canvas ref="expensesChart" class="w-full h-full"></canvas>
+      <div class="bg-white p-4 rounded-xl shadow-lg h-full">
+        <div class="h-[350px]">
+          <canvas ref="expensesChart" class="w-full h-full"></canvas>
+        </div>
       </div>
     </div>
 
