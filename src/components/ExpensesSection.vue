@@ -23,7 +23,7 @@
                     {
                         label: 'Last 30 Days Expenses',
                         data: [400, 600, 200, 500],
-                        backgroundColor: 'rgba(239, 68, 68, 0.7)'
+                        backgroundColor: '#E53935'
                     }
                 ],
             },
@@ -62,7 +62,7 @@
       </div>
 
       <!-- Gráfico de Gastos -->
-      <div class="h-64 md:h-auto">
+      <div class="h-full min-h-[400px]">
         <canvas ref="expensesChart" class="w-full h-full"></canvas>
       </div>
     </div>
