@@ -47,5 +47,41 @@
 </script>
 
 <template>
+  <div class="mt-6">
+    <h2 class="text-xl font-bold text-gray-800 mb-4">Last 60 Days Income</h2>
 
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 min-h-[350px]">
+
+      <!-- Gráfico de Ingresos -->
+      <div class="bg-white p-4 rounded-xl shadow-lg h-full">
+        <div class="h-[350px]">
+          <canvas ref="incomeChart" class="w-full h-full"></canvas>
+        </div>
+      </div>
+
+      <!-- Lista de Ingresos -->
+      <div class="bg-white p-4 rounded-xl shadow-lg h-full">
+        <div class="flex justify-between items-center mb-3">
+          <h3 class="text-lg font-semibold text-gray-700">Income</h3>
+          <button class="text-sm text-gray-500 hover:text-gray-700">See All →</button>
+        </div>
+
+        <div class="flex flex-col space-y-4">
+          <div
+            v-for="income in incomes"
+            :key="income.id"
+            class="flex items-center justify-between border-b last:border-none pb-3"
+          >
+            <span class="text-2xl">{{ income.icon }}</span>
+            <div class="flex-1 ml-3">
+              <p class="text-gray-900 font-medium">{{ income.name }}</p>
+              <p class="text-sm text-gray-500">{{ income.date }}</p>
+            </div>
+            <p class="font-bold text-green-500">{{ formatCurrency(income.amount) }}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </template>
