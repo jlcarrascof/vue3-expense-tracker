@@ -42,7 +42,7 @@
   <div class="bg-white p-6 rounded-2xl shadow-md mt-6">
     <h2 class="text-xl font-bold text-gray-800 mb-4">Expenses</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 min-h-[400px]">
       <!-- Lista de Gastos -->
       <div class="flex flex-col space-y-4">
         <div
