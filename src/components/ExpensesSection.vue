@@ -62,8 +62,8 @@
       </div>
 
       <!-- Gráfico de Gastos -->
-      <div class="mt-6 md:mt-0">
-        <canvas ref="expensesChart"></canvas>
+      <div class="h-64 md:h-auto">
+        <canvas ref="expensesChart" class="w-full h-full"></canvas>
       </div>
     </div>
 
