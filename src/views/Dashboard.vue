@@ -3,6 +3,7 @@
   import SummaryCards from '../components/SummaryCards.vue'
   import TransactionTable from '../components/TransactionTable.vue'
   import FinancialOverview from '../components/FinancialOverview.vue'
+  import ExpensesSection from '../components/ExpensesSection.vue'
 </script>
 
 <template>
@@ -14,6 +15,7 @@
         <TransactionTable />
         <FinancialOverview />
       </div>
+      <ExpensesSection />
     </main>
   </div>
 </template>
