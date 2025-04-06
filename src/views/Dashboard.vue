@@ -9,7 +9,7 @@
 <template>
   <div class="flex">
     <Sidebar />
-    <main class="flex-1 p-5">
+    <main class="flex-1 p-5 space-y-6">
       <SummaryCards />
       <div class="grid grid-cols-2 gap-4">
         <TransactionTable />
