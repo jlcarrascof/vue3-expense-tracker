@@ -63,7 +63,7 @@
       <div class="bg-white p-4 rounded-xl shadow-lg h-full">
         <div class="flex justify-between items-center mb-3">
           <h3 class="text-lg font-semibold text-gray-700">Income</h3>
-          <button class="text-sm text-gray-500 hover:text-gray-700">See All →</button>
+          <router-link to="/transactions" class="text-green-600 font-semibold hover:underline">See All →</router-link>
         </div>
 
         <div class="flex flex-col space-y-4">
@@ -77,7 +77,7 @@
               <p class="text-gray-900 font-medium">{{ income.name }}</p>
               <p class="text-sm text-gray-500">{{ income.date }}</p>
             </div>
-            <p class="font-bold text-green-500">{{ formatCurrency(income.amount) }}</p>
+            <p class="font-bold text-green-500 text-sm">{{ formatCurrency(income.amount) }}</p>
           </div>
         </div>
       </div>
