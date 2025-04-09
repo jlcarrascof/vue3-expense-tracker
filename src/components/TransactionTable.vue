@@ -24,11 +24,11 @@
           <td class="flex items-center py-3">
             <span class="text-2xl bg-gray-100 p-2 rounded-full">{{ transaction.icon }}</span>
             <div class="ml-3">
-              <p class="font-semibold">{{ transaction.description }}</p>
+              <p class="font-medium">{{ transaction.description }}</p>
               <p class="text-gray-500 text-sm">{{ transaction.date }}</p>
             </div>
           </td>
-          <td class="text-right text-lg font-semibold"
+          <td class="text-right font-bold"
             :class="transaction.amount < 0 ? 'text-red-500' : 'text-green-500'">
             {{ transaction.amount < 0 ? '-' : '+' }}${{ Math.abs(transaction.amount) }}
           </td>
