@@ -7,6 +7,7 @@ const routes = [
     { path: '/', name: 'Login', component: Login },
     { path: '/signup', name: 'SignUp', component: SignUp },
     { path: '/dashboard', name: 'Dashboard', component: Dashboard, meta: { requiresAuth: true } }, // Protected route
+    { path: '/income', name: 'Income', component: IncomeView, meta: { requiresAuth: true } }, // Protected route
 ]
 
 const router = createRouter({
