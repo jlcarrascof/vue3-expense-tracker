@@ -1,5 +1,5 @@
 <script setup>
-    // import IncomeChart from '@/components/IncomeChart.vue'
+    import IncomeChart from '../components/IncomeChart.vue'
 </script>
 
 <template>
@@ -18,9 +18,7 @@
 
     <!-- Graph -->
     <div class="bg-white rounded-xl shadow-lg p-4 h-[350px]">
-        <!--
         <IncomeChart />
-        -->
     </div>
   </div>
 

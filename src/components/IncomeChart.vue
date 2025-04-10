@@ -21,7 +21,7 @@
     ]
 
     onMounted(() => {
-    const ctx = chartCanvas.value.getContext('2d')
+        const ctx = chartCanvas.value.getContext('2d')
         new Chart(ctx, {
             type: 'bar',
             data: {
