@@ -60,5 +60,5 @@
 </script>
 
 <template>
-
+    <canvas ref="chartCanvas" class="w-full h-full"></canvas>
 </template>
