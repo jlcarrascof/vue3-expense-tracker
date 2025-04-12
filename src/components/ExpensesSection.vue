@@ -57,7 +57,7 @@
               <p class="text-gray-900 font-medium">{{ expense.name }}</p>
               <p class="text-sm text-gray-500">{{ expense.date }}</p>
             </div>
-            <p class="font-bold" :class="expense.amount < 0 ? 'text-red-500' : 'text-green-500'">
+            <p class="font-bold text-sm" :class="expense.amount < 0 ? 'text-red-500' : 'text-green-500'">
               {{ formatCurrency(expense.amount) }}
             </p>
           </div>

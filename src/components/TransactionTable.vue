@@ -28,7 +28,7 @@
               <p class="text-gray-500 text-sm">{{ transaction.date }}</p>
             </div>
           </td>
-          <td class="text-right font-bold"
+          <td class="text-right text-sm font-bold"
             :class="transaction.amount < 0 ? 'text-red-500' : 'text-green-500'">
             {{ transaction.amount < 0 ? '-' : '+' }}${{ Math.abs(transaction.amount) }}
           </td>
